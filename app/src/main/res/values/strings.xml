@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="show">show</string>
+    <string name="enter_city_name">enter city name</string>
+    <string name="wind">Wind: </string>
+    <string name="сelsius">°C</string>
+    <string name="humidity">Humidity:</string>
+    <string name="percent">%</string>
+    <string name="m_sec">m/sec</string>
+    <string name="search_title">search title</string>
+</resources>
