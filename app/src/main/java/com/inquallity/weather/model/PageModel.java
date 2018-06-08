@@ -10,17 +10,10 @@ import java.util.List;
 
 public class PageModel {
 
-    @SerializedName("name")
-    private String mCityName;
-
-    @SerializedName("main")
-    private Main mMain;
-
-    @SerializedName("wind")
-    private Wind mWind;
-
-    @SerializedName("weather")
-    private List<Weather> mWeather;
+    @SerializedName("name") private String mCityName;
+    @SerializedName("main") private Main mMain;
+    @SerializedName("wind") private Wind mWind;
+    @SerializedName("weather") private List<Weather> mWeather;
 
     public String getCityName() {
         return mCityName;

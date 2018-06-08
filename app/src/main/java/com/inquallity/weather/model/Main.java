@@ -8,11 +8,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class Main {
 
-    @SerializedName("temp")
-    private double mTemp;
-
-    @SerializedName("humidity")
-    private int mHumidity;
+    @SerializedName("temp") private double mTemp;
+    @SerializedName("humidity") private int mHumidity;
 
     public double getTemp() {
         return mTemp;

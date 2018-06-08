@@ -38,20 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String KEY = "db65325252139963105cfff1e7ea564e";
 
-    @BindView(R.id.tvTemperature)
-    TextView mTemperature;
-    @BindView(R.id.tvDescription)
-    TextView mDescription;
-    @BindView(R.id.tvHumidity)
-    TextView mHumidity;
-    @BindView(R.id.tvWind)
-    TextView mWind;
-    @BindView(R.id.ivWeather)
-    ImageView mWeatherIcon;
-    @BindView(R.id.llMain)
-    LinearLayout mLinearLayout;
-    @BindView(R.id.rlDataSet)
-    RelativeLayout mRelativeLayout;
+    @BindView(R.id.tvTemperature) TextView mTemperature;
+    @BindView(R.id.tvDescription) TextView mDescription;
+    @BindView(R.id.tvHumidity) TextView mHumidity;
+    @BindView(R.id.tvWind) TextView mWind;
+    @BindView(R.id.ivWeather) ImageView mWeatherIcon;
+    @BindView(R.id.llMain) LinearLayout mLinearLayout;
+    @BindView(R.id.rlDataSet) RelativeLayout mRelativeLayout;
 
     private int mWeatherID;
     private int mTempCel;
@@ -112,16 +105,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showData(PageModel body) {
-
         mRelativeLayout.setBackgroundResource(R.drawable.rectangle);
 
         final List<Weather> weatherList = body.getWeather();
-
         for (int i = 0; i < weatherList.size(); i++) {
             mWeatherID = weatherList.get(i).getID();
             mWeatherDescription = weatherList.get(i).getDescription();
         }
-
         mWeatherIcon.setImageResource(setIcon(mWeatherID, mTempCel));
         mDescription.setText(mWeatherDescription);
 
@@ -142,9 +132,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int setIcon(int weatherID, double temp) {
-
         final int resId;
-
         if (weatherID > 800 && weatherID < 900) {
             resId = R.drawable.cloudiness;
             mLinearLayout.setBackgroundResource(R.drawable.bcg_cloud);
@@ -171,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
             resId = R.drawable.cloudiness;
             mLinearLayout.setBackgroundResource(R.drawable.bcg_cloud);
         }
-
         return resId;
     }
 }
