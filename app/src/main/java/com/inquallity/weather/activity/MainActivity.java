@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.inquallity.weather.App;
 import com.inquallity.weather.R;
@@ -68,8 +69,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_main);
-
         ButterKnife.bind(this);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getSupportActionBar().setTitle("");
     }
 
     @Override
@@ -78,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleIntent(Intent intent) {
-
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             searchData(query);
